@@ -10,7 +10,7 @@
             <objects>
                 <navigationController id="VLb-xS-bxV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="GAr-DF-SVZ"/>
-                    <navigationItem key="navigationItem" title="首页" id="4Hi-4P-v0U"/>
+                    <navigationItem key="navigationItem" id="4Hi-4P-v0U"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aoJ-p6-R7u">
@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1002" y="-895"/>
         </scene>
-        <!--Home Table View Controller-->
+        <!--首页-->
         <scene sceneID="Bm7-Sj-YKf">
             <objects>
                 <tableViewController id="Qlj-ji-wCe" customClass="HomeTableViewController" customModule="SLWeiBo" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gCD-bb-RCO" id="WdU-CT-JW6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="Qlj-ji-wCe" id="4GH-1C-B2w"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ivp-Fh-MNg"/>
+                    <navigationItem key="navigationItem" title="首页" id="Ivp-Fh-MNg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGH-PI-Cid" userLabel="First Responder" sceneMemberID="firstResponder"/>

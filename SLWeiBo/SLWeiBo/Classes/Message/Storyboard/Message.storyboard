@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Message Table View Controller-->
+        <!--消息-->
         <scene sceneID="MrW-D5-xOY">
             <objects>
                 <tableViewController id="1VH-2Q-Lzg" customClass="MessageTableViewController" customModule="SLWeiBo" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="1VH-2Q-Lzg" id="d3k-4A-yaw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bwH-ZO-eRH"/>
+                    <navigationItem key="navigationItem" title="消息" id="bwH-ZO-eRH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BkK-5c-5uv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,7 +40,7 @@
             <objects>
                 <navigationController id="kgc-LU-ohT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="tabbar_message_center" id="P35-d1-FHV"/>
-                    <navigationItem key="navigationItem" title="消息" id="vkC-dn-DJB"/>
+                    <navigationItem key="navigationItem" id="vkC-dn-DJB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ugq-0H-28a">

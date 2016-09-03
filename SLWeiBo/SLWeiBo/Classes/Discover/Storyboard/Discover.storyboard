@@ -10,7 +10,7 @@
             <objects>
                 <navigationController id="ud6-TR-6lS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="发现" image="tabbar_discover" id="pg6-8Q-53R"/>
-                    <navigationItem key="navigationItem" title="发现" id="CMW-XJ-mAR"/>
+                    <navigationItem key="navigationItem" id="CMW-XJ-mAR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lgK-Qg-oOB">
@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1002" y="276"/>
         </scene>
-        <!--Discover Table View Controller-->
+        <!--发现-->
         <scene sceneID="rd4-zD-Edn">
             <objects>
                 <tableViewController id="RE4-OK-Olp" customClass="DiscoverTableViewController" customModule="SLWeiBo" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="INm-CP-tqC" id="9xI-xb-kxF">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="RE4-OK-Olp" id="aCu-pE-cd1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iGG-re-kvn"/>
+                    <navigationItem key="navigationItem" title="发现" id="iGG-re-kvn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ne-2t-TZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
