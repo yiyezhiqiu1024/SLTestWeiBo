@@ -19,7 +19,7 @@ extension UIButton
      - parameter action:           监听行为
      - parameter forControlEvents: 监听事件类型
      
-     - returns: <#return value description#>
+     - returns: 自定义按钮
      */
     convenience init(imageName: String, backgroundImage: String, target: AnyObject?, action: Selector, forControlEvents: UIControlEvents)
     {

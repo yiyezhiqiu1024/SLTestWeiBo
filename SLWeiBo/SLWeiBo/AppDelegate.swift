@@ -15,11 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        /**
+         全局属性
+         */
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         
         return true
     }
-
+    
 }
 
 //==========================================================================================================

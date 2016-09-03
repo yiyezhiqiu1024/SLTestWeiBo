@@ -20,7 +20,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="6O8-9C-DDM" userLabel="图标">
                     <rect key="frame" x="253" y="275" width="94" height="90"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="KwU-tD-jC6">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="KwU-tD-jC6" userLabel="文本">
                     <rect key="frame" x="181" y="408" width="239" height="54"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,6 +35,9 @@
                     <state key="normal" title="注册" backgroundImage="common_button_white_disable">
                         <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="registerButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="kV4-lT-oXy"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3A-oo-cEq">
                     <rect key="frame" x="320" y="482" width="100" height="30"/>
@@ -45,6 +48,9 @@
                     <state key="normal" title="登录" backgroundImage="common_button_white_disable">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="loginButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0zv-8O-93e"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,6 +70,13 @@
                 <constraint firstItem="H3A-oo-cEq" firstAttribute="trailing" secondItem="KwU-tD-jC6" secondAttribute="trailing" id="ps2-DT-MrG"/>
                 <constraint firstItem="6O8-9C-DDM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="20" id="vEi-FZ-OSI"/>
             </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="6O8-9C-DDM" id="men-uV-4mW"/>
+                <outlet property="loginButton" destination="H3A-oo-cEq" id="epu-7k-8Tn"/>
+                <outlet property="registerButton" destination="Cve-eW-mWN" id="xIj-Gj-0wy"/>
+                <outlet property="rotationImageView" destination="2ER-BA-t9s" id="TSO-2V-HrQ"/>
+                <outlet property="textLabel" destination="KwU-tD-jC6" id="Bla-iE-4Qe"/>
+            </connections>
         </view>
     </objects>
     <resources>
