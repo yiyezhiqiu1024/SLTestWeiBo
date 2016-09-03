@@ -46,22 +46,8 @@ class MainViewController: UITabBarController {
         () -> (UIButton)
         in
         
-        let btn = UIButton()
-        
-        // 前景图片
-        btn.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: UIControlState.Normal)
-        btn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: UIControlState.Highlighted)
-        
-        // 背景图片
-        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: UIControlState.Normal)
-        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
-        
-        // 调整尺寸
-        btn.sizeToFit()
-        
-        // 监听点击事件
-        btn.addTarget(self, action: #selector(MainViewController.composeButtonClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        return btn
+        return UIButton(imageName: "tabbar_compose_icon_add", backgroundImage: "tabbar_compose_button", target: self, action: #selector(MainViewController.composeButtonClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+    
     }()
 
 }
