@@ -11,7 +11,6 @@
 		92BB38801D7A76AC00008A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB387F1D7A76AC00008A10 /* ViewController.swift */; };
 		92BB38831D7A76AC00008A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BB38811D7A76AC00008A10 /* Main.storyboard */; };
 		92BB38851D7A76AC00008A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BB38841D7A76AC00008A10 /* Assets.xcassets */; };
-		92BB38881D7A76AC00008A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BB38861D7A76AC00008A10 /* LaunchScreen.storyboard */; };
 		92BB38931D7A76AC00008A10 /* SLWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB38921D7A76AC00008A10 /* SLWeiBoTests.swift */; };
 		92BB389E1D7A76AC00008A10 /* SLWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB389D1D7A76AC00008A10 /* SLWeiBoUITests.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		92BB387F1D7A76AC00008A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92BB38821D7A76AC00008A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92BB38841D7A76AC00008A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		92BB38871D7A76AC00008A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92BB38891D7A76AC00008A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92BB388E1D7A76AC00008A10 /* SLWeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLWeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB38921D7A76AC00008A10 /* SLWeiBoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLWeiBoTests.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				92BB387F1D7A76AC00008A10 /* ViewController.swift */,
 				92BB38811D7A76AC00008A10 /* Main.storyboard */,
 				92BB38841D7A76AC00008A10 /* Assets.xcassets */,
-				92BB38861D7A76AC00008A10 /* LaunchScreen.storyboard */,
 				92BB38891D7A76AC00008A10 /* Info.plist */,
 			);
 			path = SLWeiBo;
@@ -229,7 +226,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92BB38881D7A76AC00008A10 /* LaunchScreen.storyboard in Resources */,
 				92BB38851D7A76AC00008A10 /* Assets.xcassets in Resources */,
 				92BB38831D7A76AC00008A10 /* Main.storyboard in Resources */,
 			);
@@ -299,14 +295,6 @@
 				92BB38821D7A76AC00008A10 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		92BB38861D7A76AC00008A10 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92BB38871D7A76AC00008A10 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = SLWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.SLWeiBo;
@@ -410,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = SLWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.SLWeiBo;
@@ -482,6 +472,7 @@
 				92BB38A41D7A76AC00008A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92BB38A51D7A76AC00008A10 /* Build configuration list for PBXNativeTarget "SLWeiBoTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +481,7 @@
 				92BB38A71D7A76AC00008A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92BB38A81D7A76AC00008A10 /* Build configuration list for PBXNativeTarget "SLWeiBoUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +490,7 @@
 				92BB38AA1D7A76AC00008A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
