@@ -21,6 +21,8 @@
 		924902331D7ABF46002A2650 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902321D7ABF46002A2650 /* DiscoverTableViewController.swift */; };
 		924902351D7ABF60002A2650 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902341D7ABF60002A2650 /* ProfileTableViewController.swift */; };
 		924902371D7AD6B9002A2650 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902361D7AD6B9002A2650 /* UIButton+Extension.swift */; };
+		9249023F1D7B0D51002A2650 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9249023E1D7B0D51002A2650 /* VisitorView.xib */; };
+		924902411D7B0DA9002A2650 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902401D7B0DA9002A2650 /* VisitorView.swift */; };
 		92BB387E1D7A76AC00008A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB387D1D7A76AC00008A10 /* AppDelegate.swift */; };
 		92BB38851D7A76AC00008A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BB38841D7A76AC00008A10 /* Assets.xcassets */; };
 		92BB38931D7A76AC00008A10 /* SLWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB38921D7A76AC00008A10 /* SLWeiBoTests.swift */; };
@@ -59,6 +61,8 @@
 		924902321D7ABF46002A2650 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverTableViewController.swift; path = SLWeiBo/Classes/Compose/Controller/DiscoverTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		924902341D7ABF60002A2650 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		924902361D7AD6B9002A2650 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		9249023E1D7B0D51002A2650 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
+		924902401D7B0DA9002A2650 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		92BB387A1D7A76AC00008A10 /* SLWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB387D1D7A76AC00008A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BB38841D7A76AC00008A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 		924902061D7AAD7F002A2650 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9249023D1D7B0D29002A2650 /* Xib */,
 				924902131D7AADD3002A2650 /* Storyboard */,
 				924902071D7AAD7F002A2650 /* Controller */,
 				924902081D7AAD7F002A2650 /* Model */,
@@ -240,6 +245,7 @@
 		924902091D7AAD7F002A2650 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				924902401D7B0DA9002A2650 /* VisitorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,6 +370,14 @@
 				924902241D7AB557002A2650 /* Discover.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		9249023D1D7B0D29002A2650 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				9249023E1D7B0D51002A2650 /* VisitorView.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		92BB38711D7A76AC00008A10 = {
@@ -522,6 +536,7 @@
 				924902271D7AB5BD002A2650 /* Profile.storyboard in Resources */,
 				924902211D7AB4C8002A2650 /* Home.storyboard in Resources */,
 				92BB38851D7A76AC00008A10 /* Assets.xcassets in Resources */,
+				9249023F1D7B0D51002A2650 /* VisitorView.xib in Resources */,
 				924902251D7AB557002A2650 /* Discover.storyboard in Resources */,
 				924902231D7AB526002A2650 /* Message.storyboard in Resources */,
 				924902291D7ABB9F002A2650 /* Compose.storyboard in Resources */,
@@ -557,6 +572,7 @@
 				924902311D7ABEEA002A2650 /* ComposeViewController.swift in Sources */,
 				924902371D7AD6B9002A2650 /* UIButton+Extension.swift in Sources */,
 				9249022D1D7ABE67002A2650 /* BaseTableViewController.swift in Sources */,
+				924902411D7B0DA9002A2650 /* VisitorView.swift in Sources */,
 				924902351D7ABF60002A2650 /* ProfileTableViewController.swift in Sources */,
 				924902161D7AAE1E002A2650 /* MainViewController.swift in Sources */,
 			);
