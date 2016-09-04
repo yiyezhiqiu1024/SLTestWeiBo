@@ -21,13 +21,13 @@
                     <rect key="frame" x="253" y="275" width="94" height="90"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="KwU-tD-jC6" userLabel="文本">
-                    <rect key="frame" x="181" y="408" width="239" height="54"/>
+                    <rect key="frame" x="180" y="408" width="240" height="54"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cve-eW-mWN">
-                    <rect key="frame" x="181" y="482" width="100" height="30"/>
+                    <rect key="frame" x="180" y="482" width="100" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="8L4-Yq-7Hc"/>
                         <constraint firstAttribute="width" constant="100" id="9pH-pO-mvq"/>
@@ -35,9 +35,6 @@
                     <state key="normal" title="注册" backgroundImage="common_button_white_disable">
                         <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <connections>
-                        <action selector="registerButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="kV4-lT-oXy"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3A-oo-cEq">
                     <rect key="frame" x="320" y="482" width="100" height="30"/>
@@ -48,9 +45,6 @@
                     <state key="normal" title="登录" backgroundImage="common_button_white_disable">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="loginButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="0zv-8O-93e"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>

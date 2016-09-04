@@ -32,8 +32,11 @@ class BaseTableViewController: UITableViewController {
      */
     private func setupVisitorView() -> Void {
         visitorView = VisitorView.visitorView()
-        visitorView?.delegate = self
+//        visitorView?.delegate = self
         view = visitorView
+        
+        visitorView?.registerButton.addTarget(self, action: #selector(BaseTableViewController.registerButtonDidClick), forControlEvents: UIControlEvents.TouchUpInside)
+        visitorView?.loginButton.addTarget(self, action: #selector(BaseTableViewController.loginButtonDidClick), forControlEvents: UIControlEvents.TouchUpInside)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "注册", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BaseTableViewController.registerButtonDidClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "登录", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BaseTableViewController.loginButtonDidClick))
@@ -64,13 +67,13 @@ class BaseTableViewController: UITableViewController {
 }
 
 // MARK: - 实现访客视图代理函数
-extension BaseTableViewController: VisitorViewDelegate
-{
-    func visitorViewDidClickRegisterButton(visitorView: VisitorView) {
-        myLog("")
-    }
-    
-    func visitorViewDidClickLoginButton(visitorView: VisitorView) {
-        myLog("")
-    }
-}
+//extension BaseTableViewController: VisitorViewDelegate
+//{
+//    func visitorViewDidClickRegisterButton(visitorView: VisitorView) {
+//        myLog("")
+//    }
+//    
+//    func visitorViewDidClickLoginButton(visitorView: VisitorView) {
+//        myLog("")
+//    }
+//}

@@ -11,10 +11,10 @@ import UIKit
 /**
  * 声明访客视图的代理函数
  */
-protocol VisitorViewDelegate: NSObjectProtocol {
-    func visitorViewDidClickRegisterButton(visitorView: VisitorView)
-    func visitorViewDidClickLoginButton(visitorView: VisitorView)
-}
+//protocol VisitorViewDelegate: NSObjectProtocol {
+//    func visitorViewDidClickRegisterButton(visitorView: VisitorView)
+//    func visitorViewDidClickLoginButton(visitorView: VisitorView)
+//}
 
 class VisitorView: UIView {
 
@@ -29,7 +29,7 @@ class VisitorView: UIView {
     /* 登录按钮 */
     @IBOutlet weak var loginButton: UIButton!
     /* 代理 */
-    weak var delegate: VisitorViewDelegate?
+//    weak var delegate: VisitorViewDelegate?
     
     //==========================================================================================================
     // MARK: - 内部控制函数
@@ -103,15 +103,15 @@ class VisitorView: UIView {
     /**
      监听注册按钮点击
      */
-    @IBAction func registerButtonClick(sender: AnyObject) {
-        delegate?.visitorViewDidClickRegisterButton(self)
-    }
-    
-    /**
-     监听登录按钮点击
-     */
-    @IBAction func loginButtonClick(sender: AnyObject) {
-        delegate?.visitorViewDidClickLoginButton(self)
-    }
+//    @IBAction func registerButtonClick(sender: AnyObject) {
+//        delegate?.visitorViewDidClickRegisterButton(self)
+//    }
+//    
+//    /**
+//     监听登录按钮点击
+//     */
+//    @IBAction func loginButtonClick(sender: AnyObject) {
+//        delegate?.visitorViewDidClickLoginButton(self)
+//    }
 
 }

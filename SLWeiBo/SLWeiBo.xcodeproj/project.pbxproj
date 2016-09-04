@@ -217,11 +217,11 @@
 		924902061D7AAD7F002A2650 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9249023D1D7B0D29002A2650 /* Xib */,
 				924902131D7AADD3002A2650 /* Storyboard */,
 				924902071D7AAD7F002A2650 /* Controller */,
 				924902081D7AAD7F002A2650 /* Model */,
 				924902091D7AAD7F002A2650 /* View */,
+				9249023D1D7B0D29002A2650 /* Xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
