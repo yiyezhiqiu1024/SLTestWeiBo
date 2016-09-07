@@ -27,6 +27,7 @@
 		92BB38851D7A76AC00008A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BB38841D7A76AC00008A10 /* Assets.xcassets */; };
 		92BB38931D7A76AC00008A10 /* SLWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB38921D7A76AC00008A10 /* SLWeiBoTests.swift */; };
 		92BB389E1D7A76AC00008A10 /* SLWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB389D1D7A76AC00008A10 /* SLWeiBoUITests.swift */; };
+		92BF9AFE1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		92BB38991D7A76AC00008A10 /* SLWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB389D1D7A76AC00008A10 /* SLWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLWeiBoUITests.swift; sourceTree = "<group>"; };
 		92BB389F1D7A76AC00008A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				924902361D7AD6B9002A2650 /* UIButton+Extension.swift */,
+				92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				92BB387E1D7A76AC00008A10 /* AppDelegate.swift in Sources */,
 				9249022F1D7ABEAC002A2650 /* MessageTableViewController.swift in Sources */,
 				924902311D7ABEEA002A2650 /* ComposeViewController.swift in Sources */,
+				92BF9AFE1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift in Sources */,
 				924902371D7AD6B9002A2650 /* UIButton+Extension.swift in Sources */,
 				9249022D1D7ABE67002A2650 /* BaseTableViewController.swift in Sources */,
 				924902411D7B0DA9002A2650 /* VisitorView.swift in Sources */,

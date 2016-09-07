@@ -16,6 +16,7 @@ class DiscoverTableViewController: BaseTableViewController {
         if !isLogin
         {
             visitorView?.setupVisitorViewInfo("visitordiscover_image_message", text: "登录后，最新、最热微博尽在掌握，不再会与实事潮流擦肩而过")
+            return
         }
     }
 }

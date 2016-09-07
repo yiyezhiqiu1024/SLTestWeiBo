@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     // 记录用户登录的标识
-    let isLogin: Bool = false
+    let isLogin: Bool = true
     
     // 访客窗口
     var visitorView: VisitorView?
@@ -32,7 +32,6 @@ class BaseTableViewController: UITableViewController {
      */
     private func setupVisitorView() -> Void {
         visitorView = VisitorView.visitorView()
-//        visitorView?.delegate = self
         view = visitorView
         
         visitorView?.registerButton.addTarget(self, action: #selector(BaseTableViewController.registerButtonDidClick), forControlEvents: UIControlEvents.TouchUpInside)
@@ -65,15 +64,3 @@ class BaseTableViewController: UITableViewController {
     }
 
 }
-
-// MARK: - 实现访客视图代理函数
-//extension BaseTableViewController: VisitorViewDelegate
-//{
-//    func visitorViewDidClickRegisterButton(visitorView: VisitorView) {
-//        myLog("")
-//    }
-//    
-//    func visitorViewDidClickLoginButton(visitorView: VisitorView) {
-//        myLog("")
-//    }
-//}
