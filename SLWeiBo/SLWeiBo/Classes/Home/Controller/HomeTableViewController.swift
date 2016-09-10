@@ -58,7 +58,13 @@ class HomeTableViewController: BaseTableViewController {
      */
     @objc private func rightButtonClick() -> Void
     {
-        myLog("")
+        let sb: UIStoryboard  = UIStoryboard(name: "QRCode", bundle: nil)
+        guard let qrcVC: UIViewController = sb.instantiateInitialViewController() else
+        {
+            return
+        }
+        
+        presentViewController(qrcVC, animated: true, completion: nil)
     }
     
     /**

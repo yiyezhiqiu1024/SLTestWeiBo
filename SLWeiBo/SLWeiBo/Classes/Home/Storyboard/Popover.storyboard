@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Popover View Controller-->
         <scene sceneID="kig-4x-0S8">
             <objects>
-                <viewController id="ElN-eR-A2p" sceneMemberID="viewController">
+                <viewController id="ElN-eR-A2p" customClass="PopoverViewController" customModule="SLWeiBo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QKA-cu-pLQ"/>
                         <viewControllerLayoutGuide type="bottom" id="nEV-YU-HF8"/>
