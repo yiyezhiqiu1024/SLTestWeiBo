@@ -49,28 +49,28 @@
                                 </items>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </tabBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAV-qh-4Fq" userLabel="容器视图">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAV-qh-4Fq" userLabel="容器视图">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="nyO-Ha-4aQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="nyO-Ha-4aQ" userLabel="边框">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-88-GQ0">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-88-GQ0" userLabel="冲击波">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nyO-Ha-4aQ" firstAttribute="leading" secondItem="zAV-qh-4Fq" secondAttribute="leading" id="0rK-PT-0e0"/>
-                                    <constraint firstItem="V5K-88-GQ0" firstAttribute="top" secondItem="zAV-qh-4Fq" secondAttribute="top" id="48b-0h-0vx"/>
-                                    <constraint firstAttribute="trailing" secondItem="V5K-88-GQ0" secondAttribute="trailing" id="576-eh-h37"/>
                                     <constraint firstAttribute="trailing" secondItem="nyO-Ha-4aQ" secondAttribute="trailing" id="5M0-L2-2ng"/>
                                     <constraint firstAttribute="height" constant="200" id="C8w-fo-vMs"/>
+                                    <constraint firstItem="V5K-88-GQ0" firstAttribute="leading" secondItem="zAV-qh-4Fq" secondAttribute="leading" id="Evt-bE-RDV"/>
                                     <constraint firstAttribute="width" constant="200" id="VsT-Ze-NK7"/>
                                     <constraint firstAttribute="bottom" secondItem="nyO-Ha-4aQ" secondAttribute="bottom" id="XoC-w6-BZe"/>
+                                    <constraint firstAttribute="trailing" secondItem="V5K-88-GQ0" secondAttribute="trailing" id="a6U-v5-nOU"/>
+                                    <constraint firstItem="V5K-88-GQ0" firstAttribute="top" secondItem="zAV-qh-4Fq" secondAttribute="top" id="atA-kV-OwW"/>
+                                    <constraint firstItem="V5K-88-GQ0" firstAttribute="height" secondItem="zAV-qh-4Fq" secondAttribute="height" id="baM-3O-VDg"/>
                                     <constraint firstItem="nyO-Ha-4aQ" firstAttribute="top" secondItem="zAV-qh-4Fq" secondAttribute="top" id="hya-uw-h8Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="V5K-88-GQ0" secondAttribute="bottom" id="tuL-aa-Iu3"/>
-                                    <constraint firstItem="V5K-88-GQ0" firstAttribute="leading" secondItem="zAV-qh-4Fq" secondAttribute="leading" id="zJN-h4-xwp"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -97,7 +97,10 @@
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="containerHeightCons" destination="C8w-fo-vMs" id="PcQ-t2-L8X"/>
                         <outlet property="customTabBar" destination="0f5-Pj-XXq" id="DLr-dz-KN7"/>
+                        <outlet property="scanLineTopCons" destination="atA-kV-OwW" id="NnF-7K-uq3"/>
+                        <outlet property="scanLineView" destination="V5K-88-GQ0" id="Y7Z-dC-8Mb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cu-y3-FHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
