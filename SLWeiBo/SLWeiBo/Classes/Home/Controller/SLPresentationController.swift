@@ -10,6 +10,7 @@ import UIKit
 
 class SLPresentationController: UIPresentationController {
 
+    var presentFrame = CGRectZero
     /*
      1.如果不自定义转场modal出来的控制器会移除原有的控制器
      2.如果自定义转场modal出来的控制器不会移除原有的控制器
@@ -27,7 +28,7 @@ class SLPresentationController: UIPresentationController {
     override func containerViewWillLayoutSubviews()
     {
         // 1.设置控制器尺寸
-        presentedView()?.frame = CGRect(x: 100, y: 64, width: 200, height: 300)
+        presentedView()?.frame = presentFrame
         
         // 2.添加蒙版到容器视图
         containerView?.insertSubview(coverButton, atIndex: 0)
