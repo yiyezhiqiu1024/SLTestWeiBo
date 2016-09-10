@@ -64,7 +64,17 @@ class HomeTableViewController: BaseTableViewController {
     @objc private func titleButtonClick(button: UIButton) -> Void
     {
         button.selected = !button.selected
-        myLog("")
+        
+        let sb: UIStoryboard = UIStoryboard.init(name: "Popover", bundle: nil)
+        guard let menuVC: UIViewController = sb.instantiateInitialViewController() else
+        {
+            myLog("")
+            return
+        }
+        
+        presentViewController(menuVC, animated: true, completion: nil)
+        
+        
     }
 
 }
