@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921B4EFD1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */; };
 		924902161D7AAE1E002A2650 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902141D7AAE1E002A2650 /* MainViewController.swift */; };
 		924902191D7AB304002A2650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924902181D7AB304002A2650 /* Main.storyboard */; };
 		924902211D7AB4C8002A2650 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924902201D7AB4C8002A2650 /* Home.storyboard */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCreateViewController.swift; sourceTree = "<group>"; };
 		924902141D7AAE1E002A2650 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		924902181D7AB304002A2650 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		924902201D7AB4C8002A2650 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = SLWeiBo/Classes/Home/Storyboard/Home.storyboard; sourceTree = SOURCE_ROOT; };
@@ -213,6 +215,7 @@
 				92B171641D839DFF0008EFAC /* SLPresentationController.swift */,
 				92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */,
 				92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */,
+				921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				9249022F1D7ABEAC002A2650 /* MessageTableViewController.swift in Sources */,
 				924902311D7ABEEA002A2650 /* ComposeViewController.swift in Sources */,
 				92BF9AFE1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift in Sources */,
+				921B4EFD1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift in Sources */,
 				924902371D7AD6B9002A2650 /* UIButton+Extension.swift in Sources */,
 				92B1716D1D83BDED0008EFAC /* QRCodeViewController.swift in Sources */,
 				9249022D1D7ABE67002A2650 /* BaseTableViewController.swift in Sources */,
