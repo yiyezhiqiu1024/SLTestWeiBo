@@ -56,7 +56,7 @@ class QRCodeViewController: UIViewController {
         /**
          *  执行动画
          */
-        UIView.animateWithDuration(1.0) {
+        UIView.animateWithDuration(2.0) {
             () -> (Void)
             in
             
@@ -81,7 +81,9 @@ class QRCodeViewController: UIViewController {
      监听导航条右边相册按钮
      */
     @IBAction func photoClick(sender: AnyObject) {
-        myLog("")
+        let pc: UIImagePickerController = UIImagePickerController()
+        pc.delegate = self
+        presentViewController(pc, animated: true, completion: nil)
     }
 }
 
@@ -104,3 +106,35 @@ extension QRCodeViewController: UITabBarDelegate
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+extension QRCodeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        // 1.取出选中的图片
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else
+        {
+            return
+        }
+        
+        guard let ciImage = CIImage(image: image) else
+        {
+            return
+        }
+        
+        // 2.从选中的图片中读取二维码数据
+        // 2.1创建一个探测器
+        let detector: CIDetector =  CIDetector(ofType: CIDetectorTypeText, context: nil, options: [CIDetectorAccuracy: CIDetectorAccuracyLow])
+        
+        // 2.2利用探测器探测数据
+        let results: [CIFeature] = detector.featuresInImage(ciImage)
+        // 2.3取出探测到的数据
+        for result in results {
+            myLog((result as! CIQRCodeFeature).messageString)
+        }
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
