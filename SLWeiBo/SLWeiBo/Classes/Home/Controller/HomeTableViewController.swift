@@ -61,20 +61,110 @@ class HomeTableViewController: BaseTableViewController {
         myLog("")
     }
     
+    /**
+     监听导航条标题按钮点击
+    */
     @objc private func titleButtonClick(button: UIButton) -> Void
     {
         button.selected = !button.selected
         
+        /// 1.加载UIStoryboard
         let sb: UIStoryboard = UIStoryboard.init(name: "Popover", bundle: nil)
+        /// 2.初始化菜单控制器
         guard let menuVC: UIViewController = sb.instantiateInitialViewController() else
         {
             myLog("")
             return
         }
         
+        // 3.设置转场代理
+        menuVC.transitioningDelegate = self
+        
+        // 4.设置转场动画样式
+        menuVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // 5.显示菜单控制器
         presentViewController(menuVC, animated: true, completion: nil)
-        
-        
+
     }
 
+    // 定义是否显示菜单控制器的标记
+    private var isPresent: Bool = false
+}
+
+// MARK: - UIViewControllerTransitioningDelegate
+extension HomeTableViewController: UIViewControllerTransitioningDelegate
+{
+    
+    
+    // 返回一个负责转场动画的对象
+     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController?
+    {
+        return SLPresentationController(presentedViewController: presented, presentingViewController: presenting)
+    }
+    
+    // 返回一个负责转场动画如何展现的对象
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?
+    {
+        isPresent = true
+        return self
+    }
+    
+    // 返回一个负责转场动画如何消失的对象
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
+    {
+        isPresent = false
+        return self
+    }
+    
+}
+
+extension HomeTableViewController: UIViewControllerAnimatedTransitioning
+{
+    // 告诉系统展现和消失的动画时长
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval
+    {
+        return 0.5
+    }
+    
+    // 专门用于管理moda如何展现和消失的，无论是展现还是消失都会调用该函数
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning)
+    {
+        // 判断当前是展现还是消失
+        if isPresent
+        { // 展现
+            // 1.通过ToViewKey取出的toVC对应的view
+            guard let toView = transitionContext.viewForKey(UITransitionContextToViewKey) else
+            {
+                return
+            }
+            
+            transitionContext.containerView()?.addSubview(toView)
+            // 2.设置变化比例
+            toView.transform = CGAffineTransformMakeScale(1.0, 0.0)
+            // 3.设置锚点
+            toView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
+            
+            // 4.执行动画
+            UIView.animateWithDuration(transitionDuration(transitionContext), animations: { 
+                toView.transform = CGAffineTransformIdentity
+                }, completion: { (_) in
+                    // 注意：自定义转场动画，在执行完动画之后一定要告诉系统动画执行完毕了
+                    transitionContext.completeTransition(true)
+            })
+            
+        } else
+        { // 消失
+            guard let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey) else
+            {
+                return
+            }
+            
+            UIView.animateWithDuration(transitionDuration(transitionContext), animations: { 
+                fromView.transform = CGAffineTransformMakeScale(1.0, 0.000001)
+                }, completion: { (_) in
+                    transitionContext.completeTransition(true)
+            })
+        }
+    }
 }
