@@ -14,7 +14,8 @@ class QRCodeViewController: UIViewController {
     //==========================================================================================================
     // MARK: - 成员属性
     //==========================================================================================================
-
+    /// 扫描容器视图
+    @IBOutlet weak var containerView: UIView!
     /// 底部工具条
     @IBOutlet weak var customTabBar: UITabBar!
     /// 冲击波视图
@@ -23,7 +24,7 @@ class QRCodeViewController: UIViewController {
     @IBOutlet weak var scanLineTopCons: NSLayoutConstraint!
     /// 容器视图高度约束
     @IBOutlet weak var containerHeightCons: NSLayoutConstraint!
-    
+    /// 二维码信息
     @IBOutlet weak var customLabel: UILabel!
     //==========================================================================================================
     // MARK: - 懒加载
@@ -38,7 +39,26 @@ class QRCodeViewController: UIViewController {
     }()
     
     /// 输出对象
-    private lazy var output: AVCaptureMetadataOutput = AVCaptureMetadataOutput()
+    private lazy var output: AVCaptureMetadataOutput = {
+        () -> AVCaptureMetadataOutput
+        in
+        
+        let out = AVCaptureMetadataOutput()
+        // 屏幕尺寸
+        let viewRect = self.view.frame
+        // 扫描容器尺寸
+        let containerRect = self.containerView.frame
+        
+        let x: CGFloat = containerRect.origin.y / viewRect.size.height
+        let y: CGFloat = containerRect.origin.x / viewRect.size.width
+        let width: CGFloat = containerRect.size.height / viewRect.size.height
+        let heigth: CGFloat = containerRect.size.width / viewRect.size.width
+
+        // 指定输出对象矩形指定兴趣范围
+        out.rectOfInterest = CGRect(x: x, y: y, width: width, height: heigth)
+        
+        return out
+    }()
     
     /// 会话
     private lazy var session: AVCaptureSession = AVCaptureSession()
