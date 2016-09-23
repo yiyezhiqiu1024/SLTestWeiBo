@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QRCodeViewController: UIViewController {
-
+    
     //==========================================================================================================
     // MARK: - 成员属性
     //==========================================================================================================
@@ -23,6 +24,29 @@ class QRCodeViewController: UIViewController {
     /// 容器视图高度约束
     @IBOutlet weak var containerHeightCons: NSLayoutConstraint!
     
+    @IBOutlet weak var customLabel: UILabel!
+    //==========================================================================================================
+    // MARK: - 懒加载
+    //==========================================================================================================
+    /// 输入对象
+    private lazy var input: AVCaptureDeviceInput? = {
+        () -> AVCaptureDeviceInput?
+        in
+        
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        return try? AVCaptureDeviceInput(device: device)
+    }()
+    
+    /// 输出对象
+    private lazy var output: AVCaptureMetadataOutput = AVCaptureMetadataOutput()
+    
+    /// 会话
+    private lazy var session: AVCaptureSession = AVCaptureSession()
+    
+    /// 预览图层
+    private lazy var previewLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.session)
+    
+    
     //==========================================================================================================
     // MARK: - 系统控制
     //==========================================================================================================
@@ -32,8 +56,11 @@ class QRCodeViewController: UIViewController {
 
         // 工具条默认选中第一个item
         customTabBar.selectedItem = customTabBar.items?.first
-        
+        // 设置底部工具条代理
         customTabBar.delegate = self
+        
+        // 扫描二维码
+        scanQRCode()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -67,6 +94,41 @@ class QRCodeViewController: UIViewController {
             self.scanLineTopCons.constant = self.containerHeightCons.constant
             self.view.layoutIfNeeded()
         }
+    }
+    
+    /**
+     扫描二维码
+     */
+    private func scanQRCode() -> Void {
+        // 1.判断输入对象是否可以添加到会话
+        if !session.canAddInput(input)
+        {
+            return
+        }
+        // 2.判断输出对象是否可以添加到会话
+        if !session.canAddOutput(output)
+        {
+            return
+        }
+        // 3.添加输入、输出对象到会话
+        session.addInput(input)
+        session.addOutput(output)
+        
+        // 4.设置输出对象能够解析元数据类型
+        output.metadataObjectTypes = output.availableMetadataObjectTypes
+        
+        // 5.监听输出解析到的数据
+        
+        output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
+        
+        // 6.添加预览图层
+        view.layer.insertSublayer(previewLayer, atIndex: 0)
+        previewLayer.frame = view.bounds
+        
+        // 7.会话开始运行
+        session.startRunning()
+        
+        
     }
     
 
@@ -144,5 +206,19 @@ extension QRCodeViewController: UIImagePickerControllerDelegate, UINavigationCon
         
         // 选中了任意一张图片，就会调用这个函数，移除imagePickerController
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+
+//==========================================================================================================
+// MARK: - AVCaptureMetadataOutputObjectsDelegate
+//==========================================================================================================
+extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate
+{
+    // 扫描到结果就会调用
+    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)
+    {
+        // 获取结果
+        customLabel.text = metadataObjects.last?.stringValue
     }
 }
