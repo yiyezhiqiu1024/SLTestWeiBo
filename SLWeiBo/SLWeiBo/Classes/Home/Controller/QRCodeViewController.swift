@@ -46,7 +46,8 @@ class QRCodeViewController: UIViewController {
     /// 预览图层
     private lazy var previewLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.session)
     
-    
+    /// 专门用于描边的图层
+    private lazy var containerLayer: CALayer = CALayer()
     //==========================================================================================================
     // MARK: - 系统控制
     //==========================================================================================================
@@ -128,9 +129,67 @@ class QRCodeViewController: UIViewController {
         // 7.会话开始运行
         session.startRunning()
         
-        
     }
     
+    /**
+     对扫描的二维码进行描边
+     
+     - parameter objc: 二维码数据
+     */
+    private func drawLines(objc: AVMetadataMachineReadableCodeObject) -> Void
+    {
+        // 1.安全校验
+        guard let array = objc.corners else
+        {
+            return
+        }
+        
+        // 2.创建图层，用于保存绘制的矩形
+        let layer: CAShapeLayer = CAShapeLayer()
+        layer.lineWidth = 2
+        layer.strokeColor = UIColor.greenColor().CGColor
+        layer.fillColor = UIColor.clearColor().CGColor
+        
+        // 3.创建UIBezierPath，绘制矩形
+        let path = UIBezierPath()
+        var point = CGPointZero
+        var index = 0
+        CGPointMakeWithDictionaryRepresentation((array[index++] as! CFDictionary), &point)
+        
+        // 2.1将起点移动到某一个点
+        path.moveToPoint(point)
+        
+        // 2.2连接线段
+        if index < array.count {
+            CGPointMakeWithDictionaryRepresentation((array[index++] as! CFDictionary), &point)
+            path.addLineToPoint(point)
+        }
+        
+        // 3.关闭路径
+        path.closePath()
+        
+        layer.path = path.CGPath
+        
+        // 4.将用于保存矩形的图层添加到界面上
+        containerLayer.addSublayer(layer)
+        
+    }
+
+    /**
+     清空图层
+     */
+    private func clearLayer() -> Void
+    {
+        guard let sublayers = containerLayer.sublayers else
+        {
+            return
+        }
+        
+        for sublayer in sublayers
+        {
+            sublayer.removeFromSuperlayer()
+        }
+    }
 
     //==========================================================================================================
     // MARK: - 监听事件处理
@@ -218,7 +277,22 @@ extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate
     // 扫描到结果就会调用
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)
     {
-        // 获取结果
+        // 1.显示结果
         customLabel.text = metadataObjects.last?.stringValue
+        
+        // 2.清空图层
+        clearLayer()
+        
+        // 3.拿到扫描到的数据
+        guard let metadata = metadataObjects.last as? AVMetadataObject else
+        {
+            return
+        }
+        
+        // 4.通过预览图层将corner值转换为我们能够识别的类型
+        let objc = previewLayer.transformedMetadataObjectForMetadataObject(metadata)
+        
+        // 5.对扫描到的二维码进行描边
+        drawLines(objc as! AVMetadataMachineReadableCodeObject)
     }
 }
