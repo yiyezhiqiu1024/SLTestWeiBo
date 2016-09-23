@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		921B4EFD1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */; };
+		9239FE221D950F84002DB448 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9239FE1F1D950F84002DB448 /* Home.storyboard */; };
+		9239FE231D950F84002DB448 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9239FE201D950F84002DB448 /* Popover.storyboard */; };
+		9239FE241D950F84002DB448 /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9239FE211D950F84002DB448 /* QRCode.storyboard */; };
 		924902161D7AAE1E002A2650 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902141D7AAE1E002A2650 /* MainViewController.swift */; };
 		924902191D7AB304002A2650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924902181D7AB304002A2650 /* Main.storyboard */; };
-		924902211D7AB4C8002A2650 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924902201D7AB4C8002A2650 /* Home.storyboard */; };
 		924902231D7AB526002A2650 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924902221D7AB526002A2650 /* Message.storyboard */; };
 		924902251D7AB557002A2650 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924902241D7AB557002A2650 /* Discover.storyboard */; };
 		924902271D7AB5BD002A2650 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924902261D7AB5BD002A2650 /* Profile.storyboard */; };
@@ -25,9 +27,7 @@
 		9249023F1D7B0D51002A2650 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9249023E1D7B0D51002A2650 /* VisitorView.xib */; };
 		924902411D7B0DA9002A2650 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902401D7B0DA9002A2650 /* VisitorView.swift */; };
 		925D03991D83F8E100E3B5F4 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D03981D83F8E100E3B5F4 /* PresentationManager.swift */; };
-		92B171611D839A3D0008EFAC /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B171601D839A3D0008EFAC /* Popover.storyboard */; };
 		92B171651D839DFF0008EFAC /* SLPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B171641D839DFF0008EFAC /* SLPresentationController.swift */; };
-		92B171691D83B6F30008EFAC /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B171681D83B6F30008EFAC /* QRCode.storyboard */; };
 		92B1716B1D83BDD40008EFAC /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */; };
 		92B1716D1D83BDED0008EFAC /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */; };
 		92BB387E1D7A76AC00008A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB387D1D7A76AC00008A10 /* AppDelegate.swift */; };
@@ -57,9 +57,11 @@
 
 /* Begin PBXFileReference section */
 		921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCreateViewController.swift; sourceTree = "<group>"; };
+		9239FE1F1D950F84002DB448 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		9239FE201D950F84002DB448 /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
+		9239FE211D950F84002DB448 /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		924902141D7AAE1E002A2650 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		924902181D7AB304002A2650 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		924902201D7AB4C8002A2650 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = SLWeiBo/Classes/Home/Storyboard/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		924902221D7AB526002A2650 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = SLWeiBo/Classes/Message/Storyboard/Message.storyboard; sourceTree = SOURCE_ROOT; };
 		924902241D7AB557002A2650 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = SLWeiBo/Classes/Discover/Storyboard/Discover.storyboard; sourceTree = SOURCE_ROOT; };
 		924902261D7AB5BD002A2650 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = SLWeiBo/Classes/Profile/Storyboard/Profile.storyboard; sourceTree = SOURCE_ROOT; };
@@ -74,9 +76,7 @@
 		9249023E1D7B0D51002A2650 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		924902401D7B0DA9002A2650 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		925D03981D83F8E100E3B5F4 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
-		92B171601D839A3D0008EFAC /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
 		92B171641D839DFF0008EFAC /* SLPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPresentationController.swift; sourceTree = "<group>"; };
-		92B171681D83B6F30008EFAC /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		92BB387A1D7A76AC00008A10 /* SLWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +202,6 @@
 		924902021D7AAD7F002A2650 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9249021B1D7AB36F002A2650 /* Storyboard */,
 				924902031D7AAD7F002A2650 /* Controller */,
 				924902041D7AAD7F002A2650 /* Model */,
 				924902051D7AAD7F002A2650 /* View */,
@@ -213,10 +212,13 @@
 		924902031D7AAD7F002A2650 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9239FE1F1D950F84002DB448 /* Home.storyboard */,
 				9249022A1D7ABE4F002A2650 /* HomeTableViewController.swift */,
 				925D03981D83F8E100E3B5F4 /* PresentationManager.swift */,
 				92B171641D839DFF0008EFAC /* SLPresentationController.swift */,
+				9239FE201D950F84002DB448 /* Popover.storyboard */,
 				92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */,
+				9239FE211D950F84002DB448 /* QRCode.storyboard */,
 				92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */,
 				921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */,
 			);
@@ -353,16 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				924902181D7AB304002A2650 /* Main.storyboard */,
-			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		9249021B1D7AB36F002A2650 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				924902201D7AB4C8002A2650 /* Home.storyboard */,
-				92B171601D839A3D0008EFAC /* Popover.storyboard */,
-				92B171681D83B6F30008EFAC /* QRCode.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -561,15 +553,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				924902271D7AB5BD002A2650 /* Profile.storyboard in Resources */,
-				924902211D7AB4C8002A2650 /* Home.storyboard in Resources */,
 				92BB38851D7A76AC00008A10 /* Assets.xcassets in Resources */,
 				9249023F1D7B0D51002A2650 /* VisitorView.xib in Resources */,
-				92B171691D83B6F30008EFAC /* QRCode.storyboard in Resources */,
-				92B171611D839A3D0008EFAC /* Popover.storyboard in Resources */,
 				924902251D7AB557002A2650 /* Discover.storyboard in Resources */,
+				9239FE241D950F84002DB448 /* QRCode.storyboard in Resources */,
+				9239FE231D950F84002DB448 /* Popover.storyboard in Resources */,
 				924902231D7AB526002A2650 /* Message.storyboard in Resources */,
 				924902291D7ABB9F002A2650 /* Compose.storyboard in Resources */,
 				924902191D7AB304002A2650 /* Main.storyboard in Resources */,
+				9239FE221D950F84002DB448 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,12 @@
 
 import UIKit
 
+//==========================================================================================================
+// MARK: - 发出通知使用的Key
+//==========================================================================================================
+/// 展现
 let PresentationManagerDidPresented = "PresentationManagerDidPresented"
+/// 消除
 let PresentationManagerDidDismissed = "PresentationManagerDidDismissed"
 
 class PresentationManager: NSObject, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
@@ -34,7 +39,7 @@ class PresentationManager: NSObject, UIViewControllerTransitioningDelegate, UIVi
         return self
     }
     
-    // 返回一个负责转场动画如何消失的对象
+    // 返回一个负责转场动画如何消除的对象
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
         isPresent = false
@@ -42,13 +47,13 @@ class PresentationManager: NSObject, UIViewControllerTransitioningDelegate, UIVi
         return self
     }
     
-    // 告诉系统展现和消失的动画时长
+    // 告诉系统展现和消除的动画时长
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval
     {
         return 0.5
     }
     
-    // 专门用于管理moda如何展现和消失的，无论是展现还是消失都会调用该函数
+    // 专门用于管理moda如何展现和消失的，无论是展现还是消除都会调用该函数
     func animateTransition(transitionContext: UIViewControllerContextTransitioning)
     {
         // 判断当前是展现还是消失
@@ -56,8 +61,8 @@ class PresentationManager: NSObject, UIViewControllerTransitioningDelegate, UIVi
         { // 展现
             willPresentedController(transitionContext)
         } else
-        { // 消失
-            willDissmissController(transitionContext)
+        { // 消除
+            willDismissController(transitionContext)
         }
     }
     
@@ -90,11 +95,11 @@ class PresentationManager: NSObject, UIViewControllerTransitioningDelegate, UIVi
     }
     
     /**
-     即将消失
+     即将消除
      
      - parameter transitionContext: 转场上下文
      */
-    private func willDissmissController(transitionContext: UIViewControllerContextTransitioning)
+    private func willDismissController(transitionContext: UIViewControllerContextTransitioning)
     {
         guard let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey) else
         {

@@ -10,6 +10,10 @@ import UIKit
 
 class QRCodeViewController: UIViewController {
 
+    //==========================================================================================================
+    // MARK: - 成员属性
+    //==========================================================================================================
+
     /// 底部工具条
     @IBOutlet weak var customTabBar: UITabBar!
     /// 冲击波视图
@@ -30,15 +34,13 @@ class QRCodeViewController: UIViewController {
         customTabBar.selectedItem = customTabBar.items?.first
         
         customTabBar.delegate = self
-        
-        startAnmation()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        // 开始动画
-//        startAnmation()
+        // UI完全显示的时候，再开始动画
+        startAnmation()
     }
     
     //==========================================================================================================
@@ -66,6 +68,7 @@ class QRCodeViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
 
     //==========================================================================================================
     // MARK: - 监听事件处理
@@ -87,7 +90,9 @@ class QRCodeViewController: UIViewController {
     }
 }
 
+//==========================================================================================================
 // MARK: - UITabBarDelegate
+//==========================================================================================================
 extension QRCodeViewController: UITabBarDelegate
 {
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
@@ -106,7 +111,9 @@ extension QRCodeViewController: UITabBarDelegate
     }
 }
 
+//==========================================================================================================
 // MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+//==========================================================================================================
 extension QRCodeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
 
@@ -135,6 +142,7 @@ extension QRCodeViewController: UIImagePickerControllerDelegate, UINavigationCon
             myLog((result as! CIQRCodeFeature).messageString)
         }
         
+        // 选中了任意一张图片，就会调用这个函数，移除imagePickerController
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 }
