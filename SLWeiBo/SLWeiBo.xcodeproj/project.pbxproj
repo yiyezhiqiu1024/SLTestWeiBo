@@ -30,6 +30,9 @@
 		92B171651D839DFF0008EFAC /* SLPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B171641D839DFF0008EFAC /* SLPresentationController.swift */; };
 		92B1716B1D83BDD40008EFAC /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */; };
 		92B1716D1D83BDED0008EFAC /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */; };
+		92B9B6C31D9C15150047B6B0 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9B6C21D9C15150047B6B0 /* OAuthViewController.swift */; };
+		92B9B6C51D9C15260047B6B0 /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B9B6C41D9C15260047B6B0 /* OAuth.storyboard */; };
+		92B9B6C71D9C16AB0047B6B0 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9B6C61D9C16AB0047B6B0 /* common.swift */; };
 		92BB387E1D7A76AC00008A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB387D1D7A76AC00008A10 /* AppDelegate.swift */; };
 		92BB38851D7A76AC00008A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BB38841D7A76AC00008A10 /* Assets.xcassets */; };
 		92BB38931D7A76AC00008A10 /* SLWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB38921D7A76AC00008A10 /* SLWeiBoTests.swift */; };
@@ -79,6 +82,9 @@
 		92B171641D839DFF0008EFAC /* SLPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPresentationController.swift; sourceTree = "<group>"; };
 		92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		92B9B6C21D9C15150047B6B0 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		92B9B6C41D9C15260047B6B0 /* OAuth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
+		92B9B6C61D9C16AB0047B6B0 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		92BB387A1D7A76AC00008A10 /* SLWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB387D1D7A76AC00008A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92BB38841D7A76AC00008A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		924901F91D7AAD7F002A2650 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				92B9B6C11D9C14E10047B6B0 /* OAuth */,
 				924902121D7AAD7F002A2650 /* Tools */,
 				924902061D7AAD7F002A2650 /* Main */,
 				924902021D7AAD7F002A2650 /* Home */,
@@ -347,6 +354,7 @@
 			children = (
 				924902361D7AD6B9002A2650 /* UIButton+Extension.swift */,
 				92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */,
+				92B9B6C61D9C16AB0047B6B0 /* common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -397,6 +405,15 @@
 				9249023E1D7B0D51002A2650 /* VisitorView.xib */,
 			);
 			path = Xib;
+			sourceTree = "<group>";
+		};
+		92B9B6C11D9C14E10047B6B0 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				92B9B6C21D9C15150047B6B0 /* OAuthViewController.swift */,
+				92B9B6C41D9C15260047B6B0 /* OAuth.storyboard */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		92BB38711D7A76AC00008A10 = {
@@ -558,6 +575,7 @@
 				924902251D7AB557002A2650 /* Discover.storyboard in Resources */,
 				921CE5EF1D9C061800F1CEAA /* QRCode.storyboard in Resources */,
 				921CE5EE1D9C061800F1CEAA /* Popover.storyboard in Resources */,
+				92B9B6C51D9C15260047B6B0 /* OAuth.storyboard in Resources */,
 				924902231D7AB526002A2650 /* Message.storyboard in Resources */,
 				924902291D7ABB9F002A2650 /* Compose.storyboard in Resources */,
 				924902191D7AB304002A2650 /* Main.storyboard in Resources */,
@@ -596,8 +614,10 @@
 				92BF9AFE1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift in Sources */,
 				921B4EFD1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift in Sources */,
 				925D03991D83F8E100E3B5F4 /* PresentationManager.swift in Sources */,
+				92B9B6C31D9C15150047B6B0 /* OAuthViewController.swift in Sources */,
 				924902371D7AD6B9002A2650 /* UIButton+Extension.swift in Sources */,
 				92B1716D1D83BDED0008EFAC /* QRCodeViewController.swift in Sources */,
+				92B9B6C71D9C16AB0047B6B0 /* common.swift in Sources */,
 				9249022D1D7ABE67002A2650 /* BaseTableViewController.swift in Sources */,
 				924902411D7B0DA9002A2650 /* VisitorView.swift in Sources */,
 				924902351D7ABF60002A2650 /* ProfileTableViewController.swift in Sources */,

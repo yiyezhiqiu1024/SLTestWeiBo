@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     // 记录用户登录的标识
-    let isLogin: Bool = true
+    let isLogin: Bool = false
     
     // 访客窗口
     var visitorView: VisitorView?
@@ -60,7 +60,12 @@ class BaseTableViewController: UITableViewController {
      */
     @objc private func loginButtonDidClick() -> Void
     {
-        myLog("登录按钮被点击")
+        guard let vc = UIStoryboard(name: "OAuth", bundle: nil).instantiateInitialViewController() else
+        {
+            return
+        }
+        
+        presentViewController(vc, animated: true, completion: nil)
     }
 
 }

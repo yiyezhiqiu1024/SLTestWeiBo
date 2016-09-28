@@ -8,14 +8,6 @@
 
 import UIKit
 
-//==========================================================================================================
-// MARK: - 发出通知使用的Key
-//==========================================================================================================
-/// 展现
-let PresentationManagerDidPresented = "PresentationManagerDidPresented"
-/// 消除
-let PresentationManagerDidDismissed = "PresentationManagerDidDismissed"
-
 class PresentationManager: NSObject, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
     
     // 定义是否显示菜单控制器的标记
