@@ -9,9 +9,9 @@
 import Foundation
 
 /// 申请应用时分配的AppKey
-let WB_APP_KEY = "1108855842"
+let WB_APP_KEY = "2550724916"
 /// 授权回调地址
-let WB_APP_REDIRECT = "http://www.github.com"
+let WB_APP_REDIRECT = "http://www.baidu.com"
 
 // mark - 本地通知
 /// 转场动画展现

@@ -42,4 +42,46 @@ class OAuthViewController: UIViewController {
     @IBAction func closeClick() {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+}
+
+//==========================================================================================================
+// MARK: - UIWebViewDelegate
+//==========================================================================================================
+extension OAuthViewController: UIWebViewDelegate
+{
+    
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        // 登录界面 : https://api.weibo.com/oauth2/authorize?client_id=2550724916&redirect_uri=http://www.baidu.com
+        // 输入账户密码之后 https://api.weibo.com/oauth2/authorize
+        // 授权 http://www.baidu.com/?code=8f92ca9aac8b815993357d1113a4aaf1
+        // 取消授权 http://www.baidu.com/?error_uri=%2Foauth2%2Fauthorize&error=access_denied&error_description=user%20denied%20your%20request.&error_code=21330
+        
+        // 1.获取Requset的URL并转换成String
+        guard let urlStr: String = request.URL?.absoluteString else
+        {
+            return false
+        }
+    
+        // 2.根据前缀判断是否是授权回调界面
+        if !urlStr.hasPrefix(WB_APP_REDIRECT)
+        {
+            myLog("不是授权回调界面")
+            return true
+        }
+
+        // 3.根据是否包含key字符串,获取code
+        myLog("是授权回调界面")
+        let key: String = "code="
+        if urlStr.containsString(key)
+        {   
+            let code: String? = request.URL!.query?.substringFromIndex(key.endIndex)
+            myLog(code)
+            
+            return false
+        }
+        
+        myLog("授权失败")
+        return false
+    }
 }
