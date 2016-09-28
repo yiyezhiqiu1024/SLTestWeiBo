@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89372FF2DDC2815FACF38B89 /* Pods_SLWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D971BC42675B487F0575C944 /* Pods_SLWeiBo.framework */; };
 		921B4EFD1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */; };
 		921CE5ED1D9C061800F1CEAA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921CE5EA1D9C061800F1CEAA /* Home.storyboard */; };
 		921CE5EE1D9C061800F1CEAA /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 921CE5EB1D9C061800F1CEAA /* Popover.storyboard */; };
@@ -27,6 +28,7 @@
 		9249023F1D7B0D51002A2650 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9249023E1D7B0D51002A2650 /* VisitorView.xib */; };
 		924902411D7B0DA9002A2650 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924902401D7B0DA9002A2650 /* VisitorView.swift */; };
 		925D03991D83F8E100E3B5F4 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925D03981D83F8E100E3B5F4 /* PresentationManager.swift */; };
+		92850F0F1D9C862000A6B9A9 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92850F0E1D9C862000A6B9A9 /* SessionManager.swift */; };
 		92B171651D839DFF0008EFAC /* SLPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B171641D839DFF0008EFAC /* SLPresentationController.swift */; };
 		92B1716B1D83BDD40008EFAC /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */; };
 		92B1716D1D83BDED0008EFAC /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */; };
@@ -59,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7692D6B1908EF2D8F9A443B9 /* Pods-SLWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLWeiBo/Pods-SLWeiBo.release.xcconfig"; sourceTree = "<group>"; };
 		921B4EFC1D83ECAB0007D9E8 /* QRCodeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCreateViewController.swift; sourceTree = "<group>"; };
 		921CE5EA1D9C061800F1CEAA /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		921CE5EB1D9C061800F1CEAA /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		9249023E1D7B0D51002A2650 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		924902401D7B0DA9002A2650 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		925D03981D83F8E100E3B5F4 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		92850F0E1D9C862000A6B9A9 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		92B171641D839DFF0008EFAC /* SLPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLPresentationController.swift; sourceTree = "<group>"; };
 		92B1716A1D83BDD40008EFAC /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		92B1716C1D83BDED0008EFAC /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		92BB389F1D7A76AC00008A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		92BF9AFF1D80551600DCA313 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		C4E61B566244ECA0EF283201 /* Pods-SLWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLWeiBo/Pods-SLWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
+		D971BC42675B487F0575C944 /* Pods_SLWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89372FF2DDC2815FACF38B89 /* Pods_SLWeiBo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +131,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EFAB03CEB4FE68E3C89A70D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D971BC42675B487F0575C944 /* Pods_SLWeiBo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		747F9CA208FF99CC610B96EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4E61B566244ECA0EF283201 /* Pods-SLWeiBo.debug.xcconfig */,
+				7692D6B1908EF2D8F9A443B9 /* Pods-SLWeiBo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		924901F91D7AAD7F002A2650 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +379,7 @@
 				924902361D7AD6B9002A2650 /* UIButton+Extension.swift */,
 				92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */,
 				92B9B6C61D9C16AB0047B6B0 /* common.swift */,
+				92850F0E1D9C862000A6B9A9 /* SessionManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -423,6 +448,8 @@
 				92BB38911D7A76AC00008A10 /* SLWeiBoTests */,
 				92BB389C1D7A76AC00008A10 /* SLWeiBoUITests */,
 				92BB387B1D7A76AC00008A10 /* Products */,
+				747F9CA208FF99CC610B96EB /* Pods */,
+				1EFAB03CEB4FE68E3C89A70D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -472,9 +499,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92BB38A21D7A76AC00008A10 /* Build configuration list for PBXNativeTarget "SLWeiBo" */;
 			buildPhases = (
+				563954DE757DEC8420014BD6 /* [CP] Check Pods Manifest.lock */,
 				92BB38761D7A76AC00008A10 /* Sources */,
 				92BB38771D7A76AC00008A10 /* Frameworks */,
 				92BB38781D7A76AC00008A10 /* Resources */,
+				2547C086DB83F02FD0E5C4E8 /* [CP] Embed Pods Frameworks */,
+				B3C2072EEF58283F841347C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -599,6 +629,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2547C086DB83F02FD0E5C4E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLWeiBo/Pods-SLWeiBo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		563954DE757DEC8420014BD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3C2072EEF58283F841347C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SLWeiBo/Pods-SLWeiBo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92BB38761D7A76AC00008A10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -622,6 +700,7 @@
 				924902411D7B0DA9002A2650 /* VisitorView.swift in Sources */,
 				924902351D7ABF60002A2650 /* ProfileTableViewController.swift in Sources */,
 				92BF9B001D80551600DCA313 /* TitleButton.swift in Sources */,
+				92850F0F1D9C862000A6B9A9 /* SessionManager.swift in Sources */,
 				924902161D7AAE1E002A2650 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,6 +822,7 @@
 		};
 		92BB38A31D7A76AC00008A10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4E61B566244ECA0EF283201 /* Pods-SLWeiBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -756,6 +836,7 @@
 		};
 		92BB38A41D7A76AC00008A10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7692D6B1908EF2D8F9A443B9 /* Pods-SLWeiBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

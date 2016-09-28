@@ -20,7 +20,7 @@ class OAuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 1.授权网页路径
-        let urlStr: String = "https://api.weibo.com/oauth2/authorize?client_id=\(WB_APP_KEY)&redirect_uri=\(WB_APP_REDIRECT)"
+        let urlStr: String = "https://api.weibo.com/oauth2/authorize?client_id=\(WB_APP_KEY)&redirect_uri=\(WB_APP_REDIRECT_URI)"
         guard let url: NSURL = NSURL(string: urlStr) else
         {
             return
@@ -64,7 +64,7 @@ extension OAuthViewController: UIWebViewDelegate
         }
     
         // 2.根据前缀判断是否是授权回调界面
-        if !urlStr.hasPrefix(WB_APP_REDIRECT)
+        if !urlStr.hasPrefix(WB_APP_REDIRECT_URI)
         {
             myLog("不是授权回调界面")
             return true
@@ -76,12 +76,42 @@ extension OAuthViewController: UIWebViewDelegate
         if urlStr.containsString(key)
         {   
             let code: String? = request.URL!.query?.substringFromIndex(key.endIndex)
-            myLog(code)
+            loadAccessToken(code)
             
             return false
         }
         
         myLog("授权失败")
         return false
+    }
+    
+    /**
+     利用RequestToken获取AccessToken
+     */
+    func loadAccessToken(codeStr: String?) -> Void {
+        // 1.判断是否有值
+        guard let code = codeStr else
+        {
+            return
+        }
+        // 2.准备请求路径
+        let URLString: String = "oauth2/access_token"
+        // 3.准备请求参数
+        let parameters = ["client_id": WB_APP_KEY, "client_secret": WB_APP_CLIENT_SECRET, "grant_type": "authorization_code", "code": code, "redirect_uri": WB_APP_REDIRECT_URI]
+        // 4.发送POST请求
+        SessionManager.sharInstance.POST(URLString, parameters: parameters, progress: { (progress: NSProgress) in
+            
+            }, success: { (task: NSURLSessionDataTask, objc: AnyObject?) in
+                myLog(objc)
+                /* 
+                 "access_token" = "2.00aDTKiF9EacmC6d421cc6840cp7WB";
+                 "expires_in" = 157679999;
+                 "remind_in" = 157679999;
+                 uid = 5233317922;
+                 */
+            }) { (task, error) in
+                myLog(error)
+        }
+        
     }
 }
