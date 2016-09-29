@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     // 记录用户登录的标识
-    let isLogin: Bool = false
+    let isLogin: Bool = UserAccount.isLogin()
     
     // 访客窗口
     var visitorView: VisitorView?

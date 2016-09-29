@@ -43,6 +43,8 @@
 		92BB389E1D7A76AC00008A10 /* SLWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB389D1D7A76AC00008A10 /* SLWeiBoUITests.swift */; };
 		92BF9AFE1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */; };
 		92BF9B001D80551600DCA313 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF9AFF1D80551600DCA313 /* TitleButton.swift */; };
+		92CB737F1D9CEA760035C8AF /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CB737E1D9CEA760035C8AF /* Welcome.storyboard */; };
+		92CB73811D9CEA880035C8AF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CB73801D9CEA880035C8AF /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		92BB389F1D7A76AC00008A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92BF9AFD1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		92BF9AFF1D80551600DCA313 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		92CB737E1D9CEA760035C8AF /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		92CB73801D9CEA880035C8AF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C4E61B566244ECA0EF283201 /* Pods-SLWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLWeiBo/Pods-SLWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		D971BC42675B487F0575C944 /* Pods_SLWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,6 +159,7 @@
 		924901F91D7AAD7F002A2650 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				92CB73761D9CE9E10035C8AF /* Newfeature */,
 				92B9B6C11D9C14E10047B6B0 /* OAuth */,
 				924902121D7AAD7F002A2650 /* Tools */,
 				924902061D7AAD7F002A2650 /* Main */,
@@ -498,6 +503,15 @@
 			path = SLWeiBoUITests;
 			sourceTree = "<group>";
 		};
+		92CB73761D9CE9E10035C8AF /* Newfeature */ = {
+			isa = PBXGroup;
+			children = (
+				92CB737E1D9CEA760035C8AF /* Welcome.storyboard */,
+				92CB73801D9CEA880035C8AF /* WelcomeViewController.swift */,
+			);
+			path = Newfeature;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -610,6 +624,7 @@
 				9249023F1D7B0D51002A2650 /* VisitorView.xib in Resources */,
 				924902251D7AB557002A2650 /* Discover.storyboard in Resources */,
 				921CE5EF1D9C061800F1CEAA /* QRCode.storyboard in Resources */,
+				92CB737F1D9CEA760035C8AF /* Welcome.storyboard in Resources */,
 				921CE5EE1D9C061800F1CEAA /* Popover.storyboard in Resources */,
 				92B9B6C51D9C15260047B6B0 /* OAuth.storyboard in Resources */,
 				924902231D7AB526002A2650 /* Message.storyboard in Resources */,
@@ -693,6 +708,7 @@
 				92B1716B1D83BDD40008EFAC /* PopoverViewController.swift in Sources */,
 				92BB387E1D7A76AC00008A10 /* AppDelegate.swift in Sources */,
 				92B171651D839DFF0008EFAC /* SLPresentationController.swift in Sources */,
+				92CB73811D9CEA880035C8AF /* WelcomeViewController.swift in Sources */,
 				9249022F1D7ABEAC002A2650 /* MessageTableViewController.swift in Sources */,
 				924902311D7ABEEA002A2650 /* ComposeViewController.swift in Sources */,
 				92BF9AFE1D803FAF00DCA313 /* UIBarButtonItem+Extension.swift in Sources */,

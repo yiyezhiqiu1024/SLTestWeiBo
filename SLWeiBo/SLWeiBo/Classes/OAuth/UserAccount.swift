@@ -25,6 +25,12 @@ class UserAccount: NSObject, NSCoding {
     /// 授权用户的UID
     var uid: String?
     
+    ///	用户昵称
+    var screen_name: String?
+    
+    /// 用户头像地址（大图），180×180像素
+    var avatar_large: String?
+    
     init(dict: [String: AnyObject]) {
         super.init()
         // KVC
@@ -38,7 +44,7 @@ class UserAccount: NSObject, NSCoding {
     
     override var description: String
     {
-        let property = ["access_token", "expires_in", "expires_date", "uid"]
+        let property = ["access_token", "expires_in", "expires_date", "uid", "screen_name", "avatar_large"]
         let dict = dictionaryWithValuesForKeys(property)
         return "\(dict)"
     }
@@ -73,13 +79,13 @@ class UserAccount: NSObject, NSCoding {
         if UserAccount.account != nil
         {
             myLog("已经加载过")
-            return nil
+            return UserAccount.account
         }
         // 2.没有加载
         // 2.1解归档对象
         guard let account = NSKeyedUnarchiver.unarchiveObjectWithFile(UserAccount.filePath) as? UserAccount else
         {
-            return UserAccount.account
+            return nil
         }
         
         // 2.3校验是否过期
@@ -95,7 +101,6 @@ class UserAccount: NSObject, NSCoding {
             return nil
         }
         */
-        
         guard let date = account.expires_date where date.compare(NSDate()) != NSComparisonResult.OrderedAscending else
         {
             myLog("过期了")
@@ -109,7 +114,10 @@ class UserAccount: NSObject, NSCoding {
         return UserAccount.account
     }
     
-    func loadUserInfo()
+    /**
+     获取用户信息
+     */
+    func loadUserInfo(finished: (account: UserAccount?, error: NSError?) -> ())
     {
         assert(access_token != nil, "使用该方法必须先授权")
         
@@ -119,12 +127,16 @@ class UserAccount: NSObject, NSCoding {
         SessionManager.sharInstance.GET(URLString, parameters: parameters, progress: { (progress) in
             
             }, success: { (task, objc) in
-                myLog(objc)
-                let path = "objc.plist".cachesDir()
-                NSKeyedArchiver.archiveRootObject(objc!, toFile: path)
+                
+                let dict = objc as! [String: AnyObject]
+                
+                self.screen_name = (dict["screen_name"] as! String)
+                self.avatar_large = (dict["avatar_large"] as! String)
+                
+                finished(account: self, error: nil)
                 
             }) { (task, error) in
-                myLog(error)
+                finished(account: nil, error: error)
         }
     }
     
@@ -144,6 +156,8 @@ class UserAccount: NSObject, NSCoding {
         aCoder.encodeInteger(expires_in, forKey: "expires_in")
         aCoder.encodeObject(uid, forKey: "uid")
         aCoder.encodeObject(expires_date, forKey: "expires_date")
+        aCoder.encodeObject(screen_name, forKey: "screen_name")
+        aCoder.encodeObject(avatar_large, forKey: "avatar_large")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -151,6 +165,8 @@ class UserAccount: NSObject, NSCoding {
         expires_in = aDecoder.decodeIntegerForKey("expires_in") as Int
         uid = aDecoder.decodeObjectForKey("uid") as? String
         expires_date = aDecoder.decodeObjectForKey("expires_date") as? NSDate
+        screen_name = aDecoder.decodeObjectForKey("screen_name") as? String
+        avatar_large = aDecoder.decodeObjectForKey("avatar_large") as? String
     }
 
 }

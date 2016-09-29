@@ -104,8 +104,11 @@ extension OAuthViewController: UIWebViewDelegate
             }, success: { (task: NSURLSessionDataTask, objc: AnyObject?) in
                 let dict = objc as! [String: AnyObject]
                 let account = UserAccount(dict: dict)
-                myLog(account.saveAccount())
-                account.loadUserInfo()
+                
+                account.loadUserInfo({ (account, error) -> Void in
+                    account?.saveAccount()
+                })
+                
             }) { (task, error) in
                 myLog(error)
         }
