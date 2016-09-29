@@ -102,17 +102,10 @@ extension OAuthViewController: UIWebViewDelegate
         SessionManager.sharInstance.POST(URLString, parameters: parameters, progress: { (progress: NSProgress) in
             
             }, success: { (task: NSURLSessionDataTask, objc: AnyObject?) in
-//                myLog(objc)
                 let dict = objc as! [String: AnyObject]
-                
                 let account = UserAccount(dict: dict)
                 myLog(account.saveAccount())
-                /*
-                 "access_token" = "2.00aDTKiF9EacmC6d421cc6840cp7WB";
-                 "expires_in" = 157679999;
-                 "remind_in" = 157679999;
-                 uid = 5233317922;
-                 */
+                account.loadUserInfo()
             }) { (task, error) in
                 myLog(error)
         }

@@ -38,7 +38,9 @@ class UserAccount: NSObject, NSCoding {
     
     override var description: String
     {
-        return "abc"
+        let property = ["access_token", "expires_in", "expires_date", "uid"]
+        let dict = dictionaryWithValuesForKeys(property)
+        return "\(dict)"
     }
     
     //==========================================================================================================
@@ -105,6 +107,25 @@ class UserAccount: NSObject, NSCoding {
         UserAccount.account = account
         
         return UserAccount.account
+    }
+    
+    func loadUserInfo()
+    {
+        assert(access_token != nil, "使用该方法必须先授权")
+        
+        let URLString = "2/users/show.json"
+        let parameters = ["access_token": access_token!, "uid": uid!]
+        
+        SessionManager.sharInstance.GET(URLString, parameters: parameters, progress: { (progress) in
+            
+            }, success: { (task, objc) in
+                myLog(objc)
+                let path = "objc.plist".cachesDir()
+                NSKeyedArchiver.archiveRootObject(objc!, toFile: path)
+                
+            }) { (task, error) in
+                myLog(error)
+        }
     }
     
     /**
