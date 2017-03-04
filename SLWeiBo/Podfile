@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'SLWeiBo' do
+
+    pod 'AFNetworking'
+    pod 'SDWebImage'
+
+end
